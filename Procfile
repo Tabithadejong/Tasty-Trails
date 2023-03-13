@@ -1,1 +1,1 @@
-web: gunicorn tatsytrails.wsgi
+web: gunicorn tastytrails.wsgi
