@@ -1,4 +1,4 @@
-{% extend base.html %}
+{% extends "base.html" %}
 
 {% block content %}
 <div class="container-fluid"> 
@@ -12,9 +12,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {%if 'placeholder' in recipe.image.url %}
-                                <img class="card-img-frontpage" src="" alt="picture">
+                                <img class="card-img-frontpage" src="https://res.cloudinary.com/djbegeoiv/image/upload/v1678900306/130723-F-HF135-108_itwk5n.jpg" alt="picture">
                                 {%else%}
-                                <img class="card-img-frontpage" src="{{recipe.featured_image.url}}" alt="picture"></img>
+                                <img class="card-img-frontpage" src="{{recipe.image.url}}" alt="picture"></img>
                                 {%endif%}
                                 <div class="image-title">
                                     <p class="author"> {{ recipe.author }}</p>
@@ -31,7 +31,8 @@
                         </div>
                     </div>
                 </div>
-            {% if forloop.counter:|divisible:3%}
+            {% if forloop.counter|divisibleby:3 %}
+
             </div>
             <div class="row">
             {%endif%}
@@ -39,6 +40,19 @@
             </div>
         </div>
     </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
 </div>
 
 {% endblock content %}

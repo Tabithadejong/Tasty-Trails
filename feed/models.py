@@ -66,8 +66,8 @@ class Recipe(models.Model):
         return self.likes.count()
 
 
-@admin.register(Comment)
-class CommentAdmin(admin.ModelAdmin): 
+
+class Comment(models.Model): 
 
     name = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)

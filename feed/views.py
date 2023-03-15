@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from djano.views import generic 
+from django.views import generic 
 from .models import Recipe
 
-class RecipeList(generic.Listview): 
+class RecipeList(generic.ListView): 
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('category')
     template_name= 'index.html'
