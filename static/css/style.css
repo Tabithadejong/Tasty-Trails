@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&family=Roboto:wght@300&family=Smokum&display=swap');
 
 body { 
-    background-color: bisque;
+    background-color: #ffe4c4;
 }
 
 /* Navigation top bar */ 
@@ -12,19 +12,7 @@ body {
     padding-left: 20px;
     padding-bottom: 0px;
     color: #ffe4c4;
-}
-
-
-.navigation { 
-    height: 100px;
-}
-
-.nav-item { 
-    font-family: Roboto, sans-serif;
-    color: black;
-    padding-left: 20px;
-    font-weight: 400;
-    
+    font-size:xx-large; 
 }
 
 a.nav-link { 
@@ -70,6 +58,7 @@ button.user-action {
     
 }
 
+
 nav a { 
     text-decoration: none;
 }
@@ -100,7 +89,7 @@ footer {
 .footer-social { 
     text-align: center;
     align-items: center;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
    
 }
 
@@ -120,7 +109,7 @@ footer {
 }
 
 .footer-social-icons { 
-   padding: 10px;
+   padding: 10px 10px 20px 10px
 }
  
 .fa-youtube { 
@@ -128,28 +117,8 @@ footer {
     font-size: large;
 }
 
-.footer-contact { 
 
-    text-align: center;
 
-}
-
-.email-us { 
-    
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 40px;
-    background-color: #ffe4c4;
-    border: solid 2px black;
-    border-radius: 50%;
-
-}
-
-.location { 
-    list-style: none;
-    text-align: center;
-}
 
 /* Home page headline text */ 
 
@@ -157,12 +126,15 @@ footer {
     
     text-align: center;
     font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: bisque;
+    border-bottom: solid 2px #198754  ;
 }
 
-.sign-up { 
+.sign-up-button { 
     background-color: #198754;
     border: solid 2px black;
     border-radius: 50%;
@@ -176,3 +148,21 @@ footer {
     
 }
 
+.author { 
+    font-family: Raleway, sans-serif;
+}
+
+.card-title { 
+    font-family: Roboto, sans-serif;
+    color: black;
+}
+
+.card-text { 
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+}
+
+a.recipe-link { 
+    color: black;
+    
+}
