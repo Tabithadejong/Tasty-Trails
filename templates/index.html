@@ -16,7 +16,7 @@
         </div>
     </div>        
 </section>
-<section>
+<section class="main-content">
     <div class="container-fluid recipe-container"> 
         <div class="row">
             <div class="col-12 mt-3 left">
@@ -36,7 +36,7 @@
                                         <p class="author"> {{ recipe.author }}</p>
                                     </div>
                                 </div>
-                                <a href="{% url 'recipe_details' recipe.slug %}" class="recipe-link">
+                                <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link">
                                     <h2 class="card-title"> {{ recipe.recipe }}</h2>
                                     <p class="card-text">{{ recipe.cooking_time }}</p>
                                 </a>
@@ -60,10 +60,10 @@
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link text-success">&laquo; PREV </a></li>
                 {% endif %}
                 {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link text-success"> NEXT &raquo;</a></li>
     
                 {% endif %}
             </ul>

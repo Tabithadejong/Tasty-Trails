@@ -9,6 +9,14 @@ class RecipeList(generic.ListView):
     template_name= 'index.html'
     paginate_by = 3
     
-class RecipeDetailView(DetailView):
-    model = Recipe
-    template_name = 'show_recipe.html'
+class RecipeDetail(View):
+
+    def get(self, request, slug, *args, **kwardgs): 
+        queryset = Recipe.objects.filter(status=1)
+        recipe = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request, 
+            "show_recipe.html", 
+            {'recipe': recipe, 
+            })

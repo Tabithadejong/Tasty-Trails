@@ -13,7 +13,7 @@
     <title>Tasty Trails</title>
 </head>
 <body>
-    <header>
+    <header class="top-deco">
         <nav class="navbar sticky-top navbar-success bg-success">
             <div class="container-fluid">
                 <a class="brand" href="#"><h1 class="logo">Tasty ~ Trails</h1></a>
@@ -22,28 +22,63 @@
                     <li class="user-action"><i class="fa-solid fa-user"></i>Logout</li>
                 {% else %}
                     <li class="user-action"><i class="fa-solid fa-user"></i>Login</li>
-                    <a href="#" class="sign-up">Sign-up</a>
+                    <a href="#" class="sign-up">No account yet?</a>
                 {% endif %}           
                 </ul> 
             </div>   
-            <div class="container-fluid bg-success justify-content-beginning">
+            <div class="home-bar container-fluid bg-success justify-content-center">
                 <a href="#" class="home-link">Home</a>
             </div>
         </nav>
     </header>
-    <section>
+    <section class="main-content">
         {% block content %}
         <div class="jumbotron-fluid">
-            <div class="container">
-                <h4 class="recipe-title"> {{ recipe.title }}</h4>
-                <p class="recipe-preparation-display"> {{ recipe.preperation }}</p>
+            <div class="container full-display-summary">  
+                <div class="media">
+                    <div class="media-body text-center">
+                        <h4 class="card-title "> {{ recipe.recipe }}</h4>
+                        <p class="card-text"> {{recipe.cooking_time}}</p>
+                        {% if "placeholder" in recipe.image.url %}
+                        <img class="recipe-img" src="#" alt="Dish">
+                        {% else %}
+                        <img class="recipe-img" src=" {{ recipe.image.url }}" width="100%">
+                        {% endif %}
+                        <p class="card-text">{{ recipe.author }} | {{ recipe.created_on}}  </p>
+                    </div>
+                </div>   
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-sm full-display">
+                        <h5 class="full-display-header"> Ingriedients</h5>
+                        {{recipe.ingriedients | safe}}</div>
+                    <div class="col-md-4 col-sm full-display">
+                        <h5 class="full-display-header"> Preperation</h5>
+                        {{recipe.preperation | safe }}</div>
+                </div>
             </div>
         </div>
+       
 
     
    
         {% endblock content %}
     
     </section>
+    
+    <footer>
+        <div class="container-fluid bg-success fixed-bottom bottom"> 
+            <div class="row"> 
+                <div class="col text-center social-media">
+                    <h5 class="footer-social">Let's get social!</h5>
+                    <i class="footer-social-icons fa-brands fa-square-facebook"></i>
+                    <i class="footer-social-icons fa-brands fa-instagram"></i>
+                    <i class="footer-social-icons fa-brands fa-youtube"></i>
+                    <i class="footer-social-icons fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
