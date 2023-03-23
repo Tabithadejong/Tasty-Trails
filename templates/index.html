@@ -2,6 +2,14 @@
 
 {% block content %}
 <section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"  id="banner">   
+            </div>
+        </div>
+    </div>
+</section>
+<section>
     <div class="container-fluid teaser">
         <div class="row">
             <div class="col">
@@ -10,7 +18,7 @@
                     <p> Look no further. Here you can share, find and save recipes.</p> </br> 
                     <p> Also let us know how it worked out in the kitchen and do leave a comment under the recipes.</p>
                     <p> Don't forget to sign-up to get started</p>
-                    <button type="button" class="btn btn-outline-success"> Register</button>
+                    <button type="button" class="btn btn-outline-success"><a href="{% url 'account_signup'%}">Register</a></button>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ class RecipeList(generic.ListView):
     
 class RecipeDetail(View):
 
-    def get(self, request, slug, *args, **kwardgs): 
+    def get(self, request, slug, *args, **kwargs): 
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
 
