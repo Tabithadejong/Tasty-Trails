@@ -9,6 +9,7 @@ body {
 }
 
 
+
 /* Navigation top bar */ 
 
 
@@ -31,8 +32,10 @@ a.nav-link {
 }
 
 .sign-up { 
+    text-decoration: none;
     color: #ffe4c4;
     font-family: Roboto, sans serif;
+    
 }
 
 button.user-action { 
@@ -58,6 +61,17 @@ button.user-action {
     
 }
 
+.navbar { 
+    border-bottom: solid 2px #ffe4c4;
+}
+
+#dropdownMenuButton { 
+    color: #ffe4c4;
+    font-family: Roboto, sans serif;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+}
 
 
 /* Banner*/ 
@@ -163,6 +177,11 @@ button.btn.btn-outline-success {
     font-family: Roboto, sans serif;
 }
 
+.register {
+    text-decoration: none;
+    color: #198754;
+}
+
 /* Recipe holders/cards on home-page */ 
 
 .card-img-frontpage { 
@@ -214,5 +233,30 @@ a.recipe-link {
 
 .full-display-header { 
     text-decoration: underline #198754;
+}
+
+
+.download-container { 
+    margin-top: 20px;
+}
+
+/* Category pages */ 
+
+.category-header { 
+    font-family: Roboto, sans serif;
+    padding-top: 20px;
+    text-decoration: underline #198754;
+
+}
+
+/* Account Pages */ 
+
+.account-links { 
+    text-decoration: none;
+    color: inherit;
+}
+
+.sign-in-button { 
+    margin-top: 20px;
 }
 

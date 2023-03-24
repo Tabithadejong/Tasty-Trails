@@ -22,18 +22,29 @@
                 <a class="brand" href="{% url 'home' %}"><h1 class="logo">Tasty ~ Trails</h1></a>
                 <ul class="user-action justify-content-end">
                 {% if user.is_authenticated %}
-                    <li class="user-action"><a href="{% url 'account_logout' %}"><i class="fa-solid fa-user"></i>Logout</li></a>
+                    <li class="user-action"><a class="sign-up" href="{% url 'account_logout' %}"><i class="fa-solid fa-user"></i>Logout</li></a>
                 {% else %}
-                    <li class="user-action"><a href="{% url 'account_login' %}"><i class="fa-solid fa-user"></i>Login</li></a>
-                    <a href="{% url 'account_signup' %}" class="sign-up">No Account Yet? </a>
+                    <li class="user-action"><a class="sign-up"href="{% url 'account_login' %}"><i class="fa-solid fa-user"></i>Login</li></a>
+                    <a class="sign-up" href="{% url 'account_signup' %}" >No Account Yet? </a>
                 {% endif %}           
                 </ul> 
             </div>  
-            <div class="home-bar container-fluid bg-success justify-content-center">
+            <div class="home-bar sticky-top container-fluid bg-success justify-content-center">
                 <a href="{% url 'home' %}" class="home-link">Home</a>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dishes
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item " href="{%url 'starter_recipe'%}">Starters</a>
+                      <a class="dropdown-item" href="{%url 'dinner_recipe'%}">Mains</a>
+                      <a class="dropdown-item" href="{%url 'dessert_recipe'%}">Desserts</a>
+                    </div>
+                  </div>
             </div> 
         </nav>
     </header>
+    
     {% block content %}
    
     {% endblock content %}

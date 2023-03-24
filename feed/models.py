@@ -36,7 +36,7 @@ class Recipe(models.Model):
         (DESSERT, 'Dessert')
     ]
     time = [ 
-        (SHORT , '30 - 60 minutes'), 
+        (SHORT , '15 - 60 minutes'), 
         (REGULAR ,  '1 hour - 2 hour'), 
         (LONG ,  '2 hours - 3 hours'), 
     ]
@@ -67,22 +67,6 @@ class Recipe(models.Model):
 
 
 
-class Comment(models.Model): 
 
-    name = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    context = models.TextField()
-    created_on= models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
-    likes = models.ManyToManyField(User, related_name='comment_likes', blank=True)   
-
-
-    def __str__(self):
-        return self.name
-    
-    def number_of_likes(self): 
-        return self.likes.count()
-  
 
 

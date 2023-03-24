@@ -16,9 +16,8 @@
                 <div class="#">
                     <h3 id="headline">Looking for inspiration in the kitchen??</h3>
                     <p> Look no further. Here you can share, find and save recipes.</p> </br> 
-                    <p> Also let us know how it worked out in the kitchen and do leave a comment under the recipes.</p>
                     <p> Don't forget to sign-up to get started</p>
-                    <button type="button" class="btn btn-outline-success"><a href="{% url 'account_signup'%}">Register</a></button>
+                    <button type="button" class="btn btn-outline-success"><a class='register' href="{% url 'account_signup'%}">Register</a></button>
                 </div>
             </div>
         </div>
@@ -29,7 +28,6 @@
         <div class="row">
             <div class="col-12 mt-3 left">
                 <div class="row">
-                
                 {% for recipe in recipe_list %}
                     <div class="col-md-4 ">
                         <div class="card mb-4 border-success">

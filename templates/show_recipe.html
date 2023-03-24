@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/fb57944461.js" crossorigin="anonymous"></script>
-    <title>Tasty Trails</title>
-</head>
-<body>
-    <header class="top-deco">
-        <nav class="navbar sticky-top navbar-success bg-success">
-            <div class="container-fluid">
-                <a class="brand" href="#"><h1 class="logo">Tasty ~ Trails</h1></a>
-                <ul class="user-action justify-content-end">
-                {% if user.is_authenticated %}
-                    <li class="user-action"><i class="fa-solid fa-user"></i>Logout</li>
-                {% else %}
-                    <li class="user-action"><i class="fa-solid fa-user"></i>Login</li>
-                    <a href="#" class="sign-up">No account yet?</a>
-                {% endif %}           
-                </ul> 
-            </div>   
-            <div class="home-bar container-fluid bg-success justify-content-center">
-                <a href="#" class="home-link">Home</a>
-            </div>
-        </nav>
-    </header>
-    <section class="main-content">
+
+{% extends "base.html"%}
+   
         {% block content %}
+        <section class="main-content">
         <div class="jumbotron-fluid">
             <div class="container full-display-summary">  
                 <div class="media">
@@ -59,26 +29,16 @@
                 </div>
             </div>
         </div>
-       
-
-    
-   
-        {% endblock content %}
-    
-    </section>
-    
-    <footer>
-        <div class="container-fluid bg-success fixed-bottom bottom"> 
-            <div class="row"> 
-                <div class="col text-center social-media">
-                    <h5 class="footer-social">Let's get social!</h5>
-                    <i class="footer-social-icons fa-brands fa-square-facebook"></i>
-                    <i class="footer-social-icons fa-brands fa-instagram"></i>
-                    <i class="footer-social-icons fa-brands fa-youtube"></i>
-                    <i class="footer-social-icons fa-brands fa-twitter"></i>
+        <div class="çontainer text-center download-container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-outline-success"> download recipe</p>
                 </div>
             </div>
         </div>
+        
+        </section>
+        {% endblock content %} 
     </footer>
 </body>
 </html>
