@@ -2,8 +2,8 @@
 {% extends "base.html"%}
    
         {% block content %}
-        <section class="main-content">
-        <div class="jumbotron-fluid">
+<section class="main-content" >
+        <div class="jumbotron-fluid" id="pdf-content">
             <div class="container full-display-summary">  
                 <div class="media">
                     <div class="media-body text-center">
@@ -18,7 +18,7 @@
                     </div>
                 </div>   
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid" >
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-sm full-display">
                         <h5 class="full-display-header"> Ingriedients</h5>
@@ -32,13 +32,12 @@
         <div class="çontainer text-center download-container">
             <div class="row">
                 <div class="col">
-                    <button type="button" class="btn btn-outline-success"> download recipe</p>
+                    <button type="button" class="btn btn-outline-success" id="generate-pdf"> download recipe</p>
                 </div>
             </div>
         </div>
-        
-        </section>
-        {% endblock content %} 
-    </footer>
-</body>
-</html>
+</section>
+        {% endblock content %}  
+
+       
+ 

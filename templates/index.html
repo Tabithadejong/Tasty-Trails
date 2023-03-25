@@ -29,7 +29,7 @@
             <div class="col-12 mt-3 left">
                 <div class="row">
                 {% for recipe in recipe_list %}
-                    <div class="col-md-4 ">
+                    <div class="col-md-4">
                         <div class="card mb-4 border-success">
                             <div class="card-body">
                                 <div class="image-container">
@@ -47,9 +47,7 @@
                                     <p class="card-text">{{ recipe.cooking_time }}</p>
                                 </a>
                                 <hr /> 
-                                <p class='card-text text-muted h6'> {{ recipe.created_on }}
-                                    <i class="far fa-like"></i>{{recipe.number_of_likes}}
-                                </p>
+                                <p class='card-text text-muted h6'> {{ recipe.created_on }}</p>
                             </div>
                         </div>
                     </div>

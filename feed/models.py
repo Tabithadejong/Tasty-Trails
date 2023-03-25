@@ -53,7 +53,7 @@ class Recipe(models.Model):
     preperation = models.TextField()
     image= CloudinaryField('image', default='placeholder')
     status = models.IntegerField(choices=status, default=0)
-    likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)  
+     
 
     class Meta:
         ordering = ['category']
@@ -62,8 +62,6 @@ class Recipe(models.Model):
     def __str__(self):
         return self.recipe
     
-    def number_of_likes(self): 
-        return self.likes.count()
 
 
 

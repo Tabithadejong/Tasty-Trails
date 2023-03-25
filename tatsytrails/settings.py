@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_summernote', 
     'django_filters', 
+    
 
 ]
 

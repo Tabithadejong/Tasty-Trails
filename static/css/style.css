@@ -73,6 +73,9 @@ button.user-action {
     text-decoration: underline;
 }
 
+button.btn.btn.outline-success:hover { 
+    transition-timing-function: ease-in-out; 
+}
 
 /* Banner*/ 
 
@@ -185,7 +188,8 @@ button.btn.btn-outline-success {
 /* Recipe holders/cards on home-page */ 
 
 .card-img-frontpage { 
-    width:80%; 
+   width: 80%;
+   max-height: 50%;
     
 }
 
@@ -207,6 +211,8 @@ a.recipe-link {
     color: black;
     
 }
+
+
 
 /* full recipe display page */ 
 

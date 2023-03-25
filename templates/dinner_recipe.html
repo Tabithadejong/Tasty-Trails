@@ -2,31 +2,46 @@
 
 {% block content%}
 
-<h5 class="category-header text-center">Main Dishes</h5>
-{% for dine in dinner%}
-<div class="col-md-4 ">
-    <div class="card mb-4 border-success">
-        <div class="card-body">
-            <div class="image-container">
-                {%if 'placeholder' in dine.image.url %}
-                <img class="card-img-frontpage" src="https://res.cloudinary.com/djbegeoiv/image/upload/v1678900306/130723-F-HF135-108_itwk5n.jpg" alt="picture">
+<h5 class="category-header text-center">Main Dishes </h5>
+<section class="main-content">
+    <div class="container-fluid recipe-container"> 
+        <div class="row">
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                {% for main in dinner %}
+                    <div class="col-md-4 ">
+                        <div class="card mb-4 border-success">
+                            <div class="card-body">
+                                <div class="image-container">
+                {%if 'placeholder' in main.image.url %}
+                                    <img class="card-img-frontpage" src="https://res.cloudinary.com/djbegeoiv/image/upload/v1678900306/130723-F-HF135-108_itwk5n.jpg" alt="picture">
                 {%else%}
-                <img class="card-img-frontpage" src="{{dine.image.url}}" alt="picture"></img>
+                                    <img class="card-img-frontpage" src="{{main.image.url}}" alt="picture"></img>
                 {%endif%}
-                <div class="image-title">
-                    <p class="author"> {{ dine.author }}</p>
+                                    <div class="image-title">
+                                        <p class="author"> {{ main.author }}</p>
+                                    </div>
+                                </div>
+                                <a href="{% url 'recipe_detail' main.slug %}" class="recipe-link">
+                                    <h2 class="card-title"> {{ main.recipe }}</h2>
+                                    <p class="card-text">{{ main.cooking_time }}</p>
+                                </a>
+                                <hr /> 
+                                <p class='card-text text-muted h6'> {{ main.created_on }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:3 %}
+    
+                </div>
+                <div class="row">
+                {%endif%}
+                {%endfor%}
+                </div>
                 </div>
             </div>
-            <a href="{% url 'recipe_detail' dine.slug %}" class="recipe-link">
-                <h2 class="card-title"> {{ dine.recipe }}</h2>
-                <p class="card-text">{{ dine.cooking_time }}</p>
-            </a>
-            <hr /> 
-            <p class='card-text text-muted h6'> {{ dine.created_on }}
-                <i class="far fa-like"></i>{{dine.number_of_likes}}
-            </p>
-        </div>
+        </div> 
     </div>
-</div>
-{% endfor%}
+</section>
+
 {% endblock content %}

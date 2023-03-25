@@ -2,6 +2,9 @@ from django.shortcuts import render , get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe
+from .forms import MyModelForm
+
+
 
 
 class RecipeList(generic.ListView): 
@@ -48,4 +51,13 @@ def dessert_recipe(request):
     return render(request, 'dessert_recipe.html',
     {'dessert': dessert, 
      } )     
+
+
+
+def AddRecipe(request):
+
+    def AddRecipe(request):
+        form = MyModelForm()
+        context = {'form': form}
+        return render(request, 'add_recipe.html', context)
 
