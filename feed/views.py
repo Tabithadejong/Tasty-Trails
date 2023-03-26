@@ -56,8 +56,8 @@ def dessert_recipe(request):
 
 def AddRecipe(request):
 
-    def AddRecipe(request):
         form = MyModelForm()
         context = {'form': form}
-        return render(request, 'add_recipe.html', context)
+
+        return render(request, 'add_recipe.html',context)
 
