@@ -1,4 +1,4 @@
-from django.shortcuts import render , get_object_or_404, reverse
+from django.shortcuts import render , get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe
@@ -61,3 +61,16 @@ def AddRecipe(request):
 
         return render(request, 'add_recipe.html',context)
 
+
+def recipe_submit(request):
+    if request.method == 'POST':
+
+        form = MyModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('recipe_submit.html')
+    else:
+        form = MyModelForm()
+    return render(request, 'recipe_submit.html', {'form': form})
+
+       

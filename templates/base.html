@@ -25,7 +25,7 @@
                 <ul class="user-action justify-content-end">
                 {% if user.is_authenticated %}
                     <li class="user-action"><a class="sign-up" href="{% url 'account_logout' %}"><i class="fa-solid fa-user"></i>Logout</li></a>
-                    <a href="{% url 'add_recipe' %}" class="add-recipe">Add Recipe</a>
+                    <a href="{% url 'add_recipe' %}" class="sign-up">Add Recipe</a>
                 {% else %}
                     <li class="user-action"><a class="sign-up"href="{% url 'account_login' %}"><i class="fa-solid fa-user"></i>Login</li></a>
                     <a class="sign-up" href="{% url 'account_signup' %}" >No Account Yet? </a>

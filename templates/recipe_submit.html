@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+    <div class="row succes justify-content-center">
+        <div class="col-sm col-md-6 text-center">
+            <h3> You have added your recipe succesfully.</h3>
+            <a class="main-feed" href="{% url 'home' %}">Let's get back to the main feed</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

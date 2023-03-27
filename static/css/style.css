@@ -250,6 +250,7 @@ a.recipe-link {
 
 .category-header { 
     font-family: Roboto, sans serif;
+    font-weight: 800 ;
     padding-top: 20px;
     text-decoration: underline #198754;
 
@@ -266,3 +267,31 @@ a.recipe-link {
     margin-top: 20px;
 }
 
+
+
+/* Add recipe page */ 
+
+.form-explain { 
+    background-color: #ffe4c4;
+}
+.add-headline { 
+    font-family: Raleway, sans-serif;
+    padding-top: 20px;
+}
+
+.form-body { 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* Succes page */ 
+
+.succes { 
+    padding-top: 200px;
+}
+
+.main-feed { 
+    text-decoration: underline;
+    color: black;
+}

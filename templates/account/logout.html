@@ -13,12 +13,12 @@
       <h3 class="text-center category-header">{% trans "Sign Out" %}</h3>
 
       <p>{% trans 'Are you sure you want to sign out?' %}</p>
-      <form method="post" action="{% url 'account_logout' %}">
+      <form method="post" action="{% url 'account_logout' %}" class="form-control">
         {% csrf_token %}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
         {% endif %}
-        <button type="submit">{% trans 'Sign Out' %}</button>
+        <button class="btn btn-outline-success sign-in-button" type="submit">{% trans 'Sign Out' %}</button>
       </form>
     </div>
   </div>
