@@ -5,8 +5,6 @@ from .models import Recipe
 from .forms import MyModelForm
 
 
-
-
 class RecipeList(generic.ListView): 
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('category')
@@ -68,7 +66,7 @@ def recipe_submit(request):
         form = MyModelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('recipe_submit.html')
+            return redirect('recipe_submit')
     else:
         form = MyModelForm()
     return render(request, 'recipe_submit.html', {'form': form})
