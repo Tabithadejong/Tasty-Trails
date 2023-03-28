@@ -9,7 +9,7 @@
                     <div class="media-body text-center">
                         <h4 class="card-title"> {{ recipe.recipe }}</h4>
                         <p class="card-text"> {{recipe.cooking_time}}</p>
-                        <p class="card-text">{{ recipe.amount_of_people}}</p>
+                        <p class="card-text">{{ recipe.amount_of_people}} People </p>
                         {% if "placeholder" in recipe.image.url %}
                         <img class="card-img-frontpage " src="https://res.cloudinary.com/djbegeoiv/image/upload/v1680018556/pexels-elevate-1267320_r0kwnn.jpg" alt="Dish">
                         {% else %}
