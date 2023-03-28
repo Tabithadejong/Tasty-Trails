@@ -16,8 +16,10 @@
                 <div class="#">
                     <h3 id="headline">Looking for inspiration in the kitchen??</h3>
                     <p> Look no further. Here you can share, find and save recipes.</p> </br> 
+                {% if not user.is_authenticated %}
                     <p> Don't forget to sign-up to get started</p>
                     <button type="button" class="btn btn-outline-success"><a  href="{% url 'account_signup' %}" class='register'>Register</a></button>
+                {% endif %}
                 </div>
             </div>
         </div>
@@ -42,7 +44,7 @@
                                         <p class="author"> {{ recipe.author }}</p>
                                     </div>
                                 </div>
-                                <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link">
+                                <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link" target="_blank">
                                     <h2 class="card-title"> {{ recipe.recipe }}</h2>
                                     <p class="card-text">{{ recipe.cooking_time }}</p>
                                 </a>
