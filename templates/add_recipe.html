@@ -15,16 +15,16 @@
     <div class='row'>
       <div class="col">
         <h6 class="category-header text-center">Your Recipe</h6>
-      <form method="post" action="{% url 'recipe_submit' %}" class="form-control text-center form-body">
+        <form method="post" action="{% url 'recipe_submit' %}" class="form-control text-center form-body">
         {% csrf_token %}
        
 
         {{form.as_p}}
         
         
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 

@@ -4,13 +4,15 @@ from django.http import HttpResponseRedirect
 from .models import Recipe
 from .forms import MyModelForm
 
-
+# view code for main feed recipes
 class RecipeList(generic.ListView): 
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('category')
     template_name= 'index.html'
     paginate_by = 3
-    
+
+
+# view code for displaying the individual recipes    
 class RecipeDetail(View):
 
     def get(self, request, slug, *args, **kwargs): 
@@ -24,7 +26,7 @@ class RecipeDetail(View):
             {'recipe': recipe, 
             })
 
-
+# view code for rendering new page with only Starter recipes
 def starter_recipe(request): 
 
     starter = Recipe.objects.filter(category='Starter')
@@ -33,6 +35,7 @@ def starter_recipe(request):
     {'starter': starter, 
      } )
 
+# view code for rendering new page with only Main Dishes 
 def dinner_recipe(request): 
 
     dinner = Recipe.objects.filter(category='Main')
@@ -42,6 +45,7 @@ def dinner_recipe(request):
      } )
 
 
+# view code for rendering new page with only Desserts recipes
 def dessert_recipe(request): 
 
     dessert = Recipe.objects.filter(category='Dessert')
@@ -51,7 +55,7 @@ def dessert_recipe(request):
      } )     
 
 
-
+# view code for displaying the form to add recipes
 def AddRecipe(request):
 
         form = MyModelForm()
@@ -59,7 +63,7 @@ def AddRecipe(request):
 
         return render(request, 'add_recipe.html',context)
 
-
+# view code for handling the add recipes form
 def recipe_submit(request):
     if request.method == 'POST':
 
