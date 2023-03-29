@@ -19,7 +19,7 @@ This app is fully responsive on all devices.
 ### Existing Features
 - Food feed
   - This is the main page where the recipes are displayed. They are ordered in sets of three. With the buttons "PREV" and "NEXT" the user can scroll through these dishes.
-  ![FoodFeed]("media/readme-p4/main-feed.png")
+  ![FoodFeed](media/readme-p4/main-feed.png)
 - Recipe display
   - Whenever a user clicks on a recipe, there will open a new tab with the chosen recipe in full display. The new tab that opens is chosen so the user will not lose where they are in their navigating the recipes.
   ** Picture of recipe full display
