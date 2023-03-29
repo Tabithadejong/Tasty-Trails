@@ -8,7 +8,7 @@ We want to inspire people to take time in the kitchen to actually make good food
 
 
 ![MyApp](media/readme-p4/sneak-preview.png)
-[TastyTrails](tastytrails.herokuapp.com)
+[TastyTrails](https://tastytrails.herokuapp.com/)
 
 This app is fully responsive on all devices. 
 
