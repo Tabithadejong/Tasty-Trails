@@ -22,35 +22,36 @@ This app is fully responsive on all devices.
   ![FoodFeed](media/readme-p4/main-feed.png)
 - Recipe display
   - Whenever a user clicks on a recipe, there will open a new tab with the chosen recipe in full display. The new tab that opens is chosen so the user will not lose where they are in their navigating the recipes.
-  ** Picture of recipe full display
+  ![FullDisplay](media/readme-p4/full-recipe-display.png)
 - Category browse
   - The user has the option to display only the Starters, Mains or Dessert by using the dropdown button in the navigation bar. This is important for the user to quickly navigate and find what they are looking for.
-  ** Picture of dropdown btn
-  ** Picture of category page
+  ![Dropdown](media/readme-p4/dropdown-menu.png)
+  ![CategoryPage](media/readme-p4/starters-category-page.png)
 - Account actions
   - Sign-up
     - When the user is not logged in there will be a button on the front page to register. This button will take them to the Sign-up page. There is also a link available in the navigation bar to the sign-up page. Both of these links are not visible when logged in. It is very important to only display relevant information to the user.
-    ** Picture of register
-    ** Picture of Sign-up
-    ** Picture of sign in page
+    ![NoAccountYet](media/readme-p4/sign-up-link.png)
+    ![Register](media/readme-p4/register-link.png)
+    ![SingUp](media/readme-p4/sign-up-page.png)
   - Sign-in
     - There is a Login link in the top corner that can be used for logging in. When a user accidentally clicks on sign-up there is a link to sign-in.
-    ** Picture of Login
-    ** Picture of Sign-in Page
+    ![Login](media/readme-p4/login-icon.png)
+    ![SignIn](media/readme-p4/sign-in-form.png)
   - Logout
     - When the User is logged in there will be a logout option in the right corner of the navigation bar.
-    ** Picture of navigation bar
+    ![Logout](media/readme-p4/logout.png)
   - Add recipe as User
     - When a User is logged in (and only then) there will be a link with "Add recipe". This link will take the user to a page with a form where they can leave a recipe.
-    ** Picture of link
-    ** Picture of page with form
+    ![AddRecipe](media/readme-p4/add-recipe-link.png)
+    ![AddRecipePage](media/readme-p4/add-recipe-page.png)
 - Admin Panel
   - CRUD
     - For someone with admin credentials there is the functionality of the admin panel. Create, Read, Update and Delete. Here recipes can be added. Content can be managed even deleted when it is deemed not fitting for the website.
-    ** Picture of admin panel
+    ![AdminPanel](media/readme-p4/admin-panel-oversight.png)
   - Navigate
-    - In the admin panel content can be navigated through in a structured way. Recipes can be searched for by Category, Creation date, or Status.
-    ** Picture of search navigation in Admin
+    - In the admin panel, content can be navigated through in a structured way. Recipes can be searched for by Category, Creation date, or Status.
+    ![AdminFilter](media/readme-p4/admin-filter.png)
+    ![AdminSearch](media/readme-p4/admin-crud.png)
  
 
 
@@ -73,7 +74,7 @@ This project was made according to the Agile development structure. This means t
 ** Picture of board
 - User stories
   - User stories were written and categorized. During the development process they were picked up one by one resulting in 9 closed User Stories.
-** Picture of user stories
+![UserStories](media/readme-p4/user-stories.png)
 
 
 ## Testing
@@ -92,12 +93,28 @@ While in development and after this project has been extensively tested.
   - The written Python code has been tested with the PEP8 linter on the local server. Documentation on each specific file is visible in the pictures.
 
 
-    - models.py
-    - test_models.py
-    - url.py
-    - views.py
-    - settings.py
+    - models.py while testing; 
+    ![Models.py](media/readme-p4/testing_models.py.png)
+    - models.py after correcting;
+    ![Models.py](media/readme-p4/testing2_models.py.png)
+    - test_models.py while testing;
+    ![Test_models.py](media/readme-p4/testing_models.py.png)
+    - test_models.py after testing; 
+    ![Test_models.py](media/readme-p4/testing2_models.py.png)
+    - url.py while testing; 
+    ![Url.py](media/readme-p4/testing_url.py.png)
+    - url.py after testing; 
+    ![Url.py](media/readme-p4/testing2_test_url.py.png)
+    - views.py while testing; 
+    ![Views.py](media/readme-p4/testing_views.py.png)
+    - views.py after testing; 
+    ![Views.py](media/readme-p4/testing2_views.py.png)
+    - settings.py while testing;
+    ![Settings.py](media/readme-p4/testing_settings.py.png)
+    - settings.py after testing; 
+    ![Settings.py](media/readme-p4/testing2_settings.py.png)
     - urls.py
+    ![Urls.py](media/readme-p4/testing_urls.py.png)
 
 
 
@@ -112,7 +129,7 @@ While in development and after this project has been extensively tested.
 - Using UnitTest
   - While coding UnitTest is used. There was a problem however with accessing the database as I have used a remote database for this project, ElephantSQL. While in testing mode I had to switch to the Django provide SQLite to be able to run my test_*.py files. Only to then work with an empty database as SQLite which was not used for my project. This has led to only keeping 1 working test file in my deployed version. Whenever it is wanted to run this test file the following line need to be added to env.py;
   os.environ['DEVELOPMENT'] = "True"
- ** Picture of running 1 test
+ ![RanTest](media/readme-p4/run_test.py.png)
 
 
 ### Manual Testing
@@ -149,7 +166,7 @@ While in development and after this project has been extensively tested.
   - First the code was written in gitpod and pushed to Github in a respiratory called Tasty Trails.
   - Tasty Trails repository is connected to Heroku.
   - The branch is deployed on the Heroku platform.
-  ** Deployed link
+  [LinkToApp](https://tastytrails.herokuapp.com/)
 
 
 ## Credits
