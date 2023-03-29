@@ -7,10 +7,14 @@ Yes, Tasty Trails. Your most delicious food feed! On our main site you can find 
 We want to inspire people to take time in the kitchen to actually make good food. Food that feeds the soul.
 
 
-** Picture of website
+![MyApp](media/readme-p4/sneak-preview.png)
 [TastyTrails](tastytrails.herokuapp.com)
 
 This app is fully responsive on all devices. 
+
+![Mobile](media/readme-p4/mobile.png)
+![MediumSreen](media/readme-p4/medium-screen.png)
+![Desktop](media/readme-p4/desktop.png)
 
 
 ## Features
@@ -59,11 +63,11 @@ This app is fully responsive on all devices.
 
 
 - Download recipe
-  - In the future it would be beneficial for the Site User to download the recipe to their computers so they can print this. We have already installed this with Javascript and the functionality itself worked. Only because the html pages are rendered with Jinja templating the page is not picked up on by the pfd transformer, and even setting a timer did not help. This is a must have for later!
+  - In the future it would be beneficial for the Site User to download the recipe to their computers so they can print this. I have already installed this with Javascript and the functionality itself worked. Only because the html pages are rendered with Jinja templating the page is not picked up on by the pfd transformer, and even setting a timer did not help, it kept downloading empty pages. This is a must have for later!
 - Comment/Like
   - For a Site User to leave comments and likes on the recipes would be a great addition in the future. This way we can build a platform where people can engage and this will help us build a community. A cooking family!
 - Safe recipes
-  - In the future the account pages will be more elaborate. This way a Site User can create a personal file where recipes can be saved to either display later, or even added recipes be edited later.
+  - In the future the account pages will be more elaborate. This way a Site User can create a personal file where recipes can be saved to either display later, or even eddit recipes.
 
 
 ## Agile Development
@@ -72,6 +76,8 @@ This app is fully responsive on all devices.
 This project was made according to the Agile development structure. This means the following steps were taken before and during the development process:
 - Planning ahead with a vision board
 ![Mindmapping](media/readme-p4/mindmap.png)
+- A project was created; Tasty Trails 
+  - Planning was added to this project in the form of user stories; 
 - User stories
   - User stories were written and categorized. During the development process they were picked up one by one resulting in 9 closed User Stories.
 ![UserStories](media/readme-p4/user-stories.png)
@@ -159,7 +165,9 @@ While in development and after deployment this project has been extensively test
   2. Line too long
   The blank line is not visible as can be seen on the picture. When the lines of code that were indicated to be too long, where dived over 2 lines another warning would show up. The warnings are visible in the picture, either over-indented or under-indented.
   - Picture after correcting lenght and starting a new line; 
+    - Then I got a warning for over-indentation.
   ![Over-Indented](media/readme-p4/line-too-long-over-indented.png)
+    - When indentating one step back the warning said; under-indentation
   ![Under-Indented](media/readme-p4/line-too-long-under-indented.png)
   - Picture with no empty line but still the same warning; 
   ![EmptyLine](media/readme-p4/no-line-end-of-file.png)
@@ -181,6 +189,7 @@ While in development and after deployment this project has been extensively test
 - This app is deployed on Heroku.
   - First the code was written in gitpod and pushed to Github in a repository called Tasty Trails.
   - Tasty Trails repository is connected to Heroku.
+  - All the requirements were added to Config Vars in Heroku. 
   - The branch is deployed on the Heroku platform.
   [LinkToApp](https://tastytrails.herokuapp.com/)
 
@@ -191,11 +200,14 @@ While in development and after deployment this project has been extensively test
 ### Code
 - Code institute blog project
   - This project helped me form the idea for my own project.
+  [LinkToBlog](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment)
 
 
 ### Content
 - Code Institute
   - This school has taught me all the basics of coding. Has helped me form an idea on what project to build in Django and through very well documented resources have guided me through the process of development.
+- Pinterest
+  - Seeing the messyness of pinterest board was a big inspiration not to conform everything to one size. 
 - Word Wide Web Search Inspirations for recipes
   - By searching through many sites and blogs, I have managed to create a collection of delicious recipes.
 
@@ -215,7 +227,9 @@ While in development and after deployment this project has been extensively test
 - Code Institutes video material
   - The video classes with Code Institute have helped me to my knowledge so far. 
 
+## Conclusion 
 
+- It was a pleasure to work on this application. However there is so much more that could be added, and I sure wanted to. The powerfull tools that come with a full-stack framework are absolutely endless and I am excited to explore more. 
 
 
 
