@@ -8,7 +8,7 @@ We want to inspire people to take time in the kitchen to actually make good food
 
 
 ** Picture of website
-** Link to deployed version
+[TastyTrails](tastytrails.herokuapp.com)
 
 This app is fully responsive on all devices. 
 
@@ -59,9 +59,9 @@ This app is fully responsive on all devices.
 
 
 - Download recipe
-  - In the future it would be nice for the Site User to download the recipe to their computers so they can print this. We have already installed this with Javascript and the functionality itself worked. Only because the html pages are rendered with Jinja templating the page is not picked up on by the pfd transformer. This is something we will want to add for sure in the future.
+  - In the future it would be beneficial for the Site User to download the recipe to their computers so they can print this. We have already installed this with Javascript and the functionality itself worked. Only because the html pages are rendered with Jinja templating the page is not picked up on by the pfd transformer, and even setting a timer did not help. This is a must have for later!
 - Comment/Like
-  - For a Site User to leave comments and likes on the recipes would be a must in the future. This way we can build a platform where people can engage and this will help us build a community. A cooking family.
+  - For a Site User to leave comments and likes on the recipes would be a great addition in the future. This way we can build a platform where people can engage and this will help us build a community. A cooking family!
 - Safe recipes
   - In the future the account pages will be more elaborate. This way a Site User can create a personal file where recipes can be saved to either display later, or even added recipes be edited later.
 
@@ -71,7 +71,7 @@ This app is fully responsive on all devices.
 
 This project was made according to the Agile development structure. This means the following steps were taken before and during the development process:
 - Planning ahead with a vision board
-** Picture of board
+![Mindmapping](media/readme-p4/mindmap.png)
 - User stories
   - User stories were written and categorized. During the development process they were picked up one by one resulting in 9 closed User Stories.
 ![UserStories](media/readme-p4/user-stories.png)
@@ -79,7 +79,7 @@ This project was made according to the Agile development structure. This means t
 
 ## Testing
  
-While in development and after this project has been extensively tested.
+While in development and after deployment this project has been extensively tested.
 
 
 ### Validation Testing
@@ -89,6 +89,7 @@ While in development and after this project has been extensively tested.
   - Due to working with Jinja Templating it is not possible to let the URL be checked by the regular HTML validator from W3C. However the HTML code has been thoroughly checked to see if the formatting, indenting and overall structure is correct. The outcome is positive
 - CSS
   - The custom CSS file apart from the bootstrap styling has been tested through W3C. The result is visible in the picture, again positive.
+  ![CSSValidator](media/readme-p4/css-validator-p4.png)
 - Python
   - The written Python code has been tested with the PEP8 linter on the local server. Documentation on each specific file is visible in the pictures.
 
@@ -104,7 +105,7 @@ While in development and after this project has been extensively tested.
     - url.py while testing; 
     ![Url.py](media/readme-p4/testing_url.py.png)
     - url.py after testing; 
-    ![Url.py](media/readme-p4/testing2_test_url.py.png)
+    ![Url.py](media/readme-p4/testing2_url.py.png)
     - views.py while testing; 
     ![Views.py](media/readme-p4/testing_views.py.png)
     - views.py after testing; 
@@ -127,7 +128,7 @@ While in development and after this project has been extensively tested.
 
 
 - Using UnitTest
-  - While coding UnitTest is used. There was a problem however with accessing the database as I have used a remote database for this project, ElephantSQL. While in testing mode I had to switch to the Django provide SQLite to be able to run my test_*.py files. Only to then work with an empty database as SQLite which was not used for my project. This has led to only keeping 1 working test file in my deployed version. Whenever it is wanted to run this test file the following line need to be added to env.py;
+  - While coding UnitTest is used. There was a problem however with accessing the database as I have used a remote database for this project, ElephantSQL. While in testing mode I had to switch to the Django provide SQLite to be able to run my test_*.py files. Only to then work with an empty database as SQLite which was not used for my project. This has led to only keeping 1 working test file in my deployed version. Whenever it is desired to run this test file the following line need to be added to env.py;
   os.environ['DEVELOPMENT'] = "True"
  ![RanTest](media/readme-p4/run_test.py.png)
 
@@ -135,18 +136,33 @@ While in development and after this project has been extensively tested.
 ### Manual Testing
 
 
-- Friends/ Mentor/ Personally
-
+- By use of the project 
+  - This has been done by me personally, by friends and my mentor of Code Institute. Steps taken are; 
+    1. Using pagination functionality 
+       - Outcome as expected, turns to next and prev page. 
+       - Outcome as expected, category pages will only display current category.
+    2. Displaying full recipe
+       - Outcome as expected, full recipe displayed with foto above. 
+    3. User actions 
+       - Outcome as expected, several accounts were added that can all log in and out. 
+    4. Add recipe 
+       - Outcome as expected, when recipe is added it will appear between other recipes. 
+       - Outcome not as expected, image is not saved on file and placeholder image will be added to the recipe.
+  
 
 ### Unfixed Bugs
 
 
 - PEP8 Warnings
   - Two warnings keep remaining when running the PEP8 linter.
-  1. Blank line on the end of the page.
+  1. Blank line at end of file.
   2. Line too long
   The blank line is not visible as can be seen on the picture. When the lines of code that were indicated to be too long, where dived over 2 lines another warning would show up. The warnings are visible in the picture, either over-indented or under-indented.
-
+  - Picture after correcting lenght and starting a new line; 
+  ![Over-Indented](media/readme-p4/line-too-long-over-indented.png)
+  ![Under-Indented](media/readme-p4/line-too-long-under-indented.png)
+  - Picture with no empty line but still the same warning; 
+  ![EmptyLine](media/readme-p4/no-line-end-of-file.png)
 
   Therefore is decided to leave the warnings as the are.
 
@@ -163,7 +179,7 @@ While in development and after this project has been extensively tested.
 
 
 - This app is deployed on Heroku.
-  - First the code was written in gitpod and pushed to Github in a respiratory called Tasty Trails.
+  - First the code was written in gitpod and pushed to Github in a repository called Tasty Trails.
   - Tasty Trails repository is connected to Heroku.
   - The branch is deployed on the Heroku platform.
   [LinkToApp](https://tastytrails.herokuapp.com/)
@@ -187,16 +203,17 @@ While in development and after this project has been extensively tested.
 ### Media
 
 
-- Istock foto's
-- Open source imagery
+- Pexels free stock images [Pexels](https://www.pexels.com/nl-nl/)
+- Open source imagery [GoogleSearch](https://www.google.nl/)
 
 
 ### Tutors
 
 
 - Mentor
-  -
+  - My mentor has guided me throughout the project, has given me feedback and encouraged me.
 - Code Institutes video material
+  - The video classes with Code Institute have helped me to my knowledge so far. 
 
 
 
