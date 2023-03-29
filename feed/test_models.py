@@ -2,6 +2,7 @@ from django.test import TestCase
 from .models import Recipe
 from django.contrib.auth.models import User
 
+
 class RecipeModelTestCase(TestCase):
 
     @classmethod
@@ -20,7 +21,7 @@ class RecipeModelTestCase(TestCase):
             category=Recipe.MAIN,
             ingriedients='pasta, eggs, bacon',
             preperation='1. Cook pasta. 2. Fry bacon. 3. Whisk eggs. 4. Mix everything together.',
-            
+
         )
 
     def test_recipe_model(self):
@@ -31,5 +32,4 @@ class RecipeModelTestCase(TestCase):
         self.assertEqual(recipe.amount_of_people, Recipe.four)
         self.assertEqual(recipe.category, Recipe.MAIN)
         self.assertEqual(recipe.ingriedients, 'pasta, eggs, bacon')
-        self.assertEqual(recipe.preperation, '1. Cook pasta. 2. Fry bacon. 3. Whisk eggs. 4. Mix everything together.')
-        
+        self.assertEqual(recipe.preperation, '1. Cook pasta. 2. Fry bacon. 3. Whisk eggs. 4. Mix everything together.')     

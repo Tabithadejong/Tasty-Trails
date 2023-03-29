@@ -11,12 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os 
+import os
 import dj_database_url
-if os.path.isfile('env.py'): 
-    import env 
-
-
+if os.path.isfile('env.py'):
+    import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -46,22 +44,21 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.sites', 
-    'allauth', 
-    'allauth.account', 
-    'allauth.socialaccount', 
-    'cloudinary_storage', 
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'feed', 
+    'feed',
     'crispy_forms',
-    'django_summernote', 
-    'django_filters', 
-    
+    'django_summernote',
+    'django_filters',
 
 ]
 
-SITE_ID = 1 
+SITE_ID = 1
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 LOGIN_REDIRECT_URL = '/'
@@ -100,15 +97,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tatsytrails.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-
-
-# DATABASES = { 
-#     'default' : dj_database_url.parse(os.environ.get('DATABASE_URL'))
-# }
-
 if 'DEVELOPMENT' in os.environ:
     DATABASES = {
         'default': {
@@ -120,7 +108,6 @@ else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-
 
 
 # Password validation
